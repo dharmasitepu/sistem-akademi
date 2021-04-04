@@ -28,7 +28,7 @@ Pre-Installation
 ****************
 -  apt update
 -  apt install git apache2 mysql-server phpmyadmin -y
--  apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap phpmbstring libapache2-mod-php -y
+-  apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php mbstring libapache2-mod-php -y
 
 ****************
 Check Status
@@ -39,6 +39,7 @@ Check Status
 ****************
 Database Setup
 ****************
+
 -  sudo mysql
 -  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY ‘admin’;
 -  GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost’;
@@ -47,6 +48,7 @@ Database Setup
 -  mysql -u root -p
 -  password : admin
 -  exit
+
 
 ****************
 Restart services
@@ -60,7 +62,7 @@ Restart services
 Deploy Website
 ****************
 -  vim /etc/apache2/apache2.conf
-Include /etc/phpmyadmin/apache.conf
+   ``Include /etc/phpmyadmin/apache.conf``
 
 -  vim /etc/apache2/sites-available/000-default.conf
 <VirtualHost *:80>
@@ -89,3 +91,4 @@ Include /etc/phpmyadmin/apache.conf
 -  git clone https://github.com/dharmasitepu/sistem-akademi
 -  mv sistem-akademi html
 -  mv html /var/www
+
