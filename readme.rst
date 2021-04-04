@@ -64,26 +64,28 @@ Deploy Website
 -  vim /etc/apache2/apache2.conf
 -  Include /etc/phpmyadmin/apache.conf
 -  vim /etc/apache2/sites-available/000-default.conf
----
-<VirtualHost *:80>
-        ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/html
-        <Directory "/var/www/html">
-            Options FollowSymLinks
-            AllowOverride All
-            Require all granted
-        </Directory>
-	ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
----
+
+
+* <VirtualHost *:80>			
+*       ServerAdmin webmaster@localhost
+*       DocumentRoot /var/www/html	
+*       <Directory "/var/www/html">	
+*       Options FollowSymLinks
+*       AllowOverride All
+*       Require all granted
+*       </Directory>
+*	ErrorLog ${APACHE_LOG_DIR}/error.log
+*       CustomLog ${APACHE_LOG_DIR}/access.log combined
+* </VirtualHost>
+ 
+
 
 -  vim /etc/apache2/apache2.conf
-<Directory /var/www>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-</Directory> 
+*  <Directory /var/www>
+*        Options Indexes FollowSymLinks
+*        AllowOverride All
+*        Require all granted
+*  </Directory> 
 
 -  cd /var/www
 -  rm -r html
