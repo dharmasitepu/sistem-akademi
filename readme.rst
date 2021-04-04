@@ -14,10 +14,10 @@ Resources at Alibaba Cloud
 Website Environment
 *******************
 -  CodeIgniter 3.1.1
--  Mysql & MariaDB
 -  Apache/nginx
 -  PhpMyadmin
 -  PHP v 7.2
+-  Mysql
 
 *******************
 
