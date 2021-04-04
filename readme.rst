@@ -6,7 +6,7 @@ Deploy at Cloud Server
 Resource at Alibaba Cloud
 *************************
 -  ( OS Ubuntu 20.04 Server )
--	 ( 1 vCPU 1 GiB ) 
+-  ( 1 vCPU 1 GiB ) 
 -  ( Disk 40 GB ) 
 -  ( Public IP )
 
@@ -26,9 +26,9 @@ Website Environment
 ****************
 Pre-Installation
 ****************
-''apt update''
--  apt install git apache2 mysql-server phpmyadmin -y
--  apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php mbstring libapache2-mod-php -y
+`apt update`
+``apt install git apache2 mysql-server phpmyadmin -y``
+``apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php mbstring libapache2-mod-php -y``
 
 ****************
 Check Status
