@@ -61,6 +61,8 @@ Restart services
 ****************
 Deploy Website
 ****************
+*******************
+*******************
 *  vim /etc/apache2/sites-available/000-default.conf
 * <VirtualHost *:80>			
 *       ServerAdmin webmaster@localhost
@@ -73,13 +75,12 @@ Deploy Website
 *	ErrorLog ${APACHE_LOG_DIR}/error.log
 *       CustomLog ${APACHE_LOG_DIR}/access.log combined
 * </VirtualHost>
- 
+*******************
+*******************
 
 
-
-
-
-
+*******************
+*******************
 
 *  vim /etc/apache2/apache2.conf
 *  <Directory /var/www>
@@ -87,14 +88,16 @@ Deploy Website
 *        AllowOverride All
 *        Require all granted
 *  </Directory>
--  Include /etc/phpmyadmin/apache.conf
+*  Include /etc/phpmyadmin/apache.conf
+*******************
+*******************
 
 
-
-
-
-
+*******************
+*******************
 -  cd /var/www
 -  rm -r html
 -  git clone https://github.com/dharmasitepu/sistem-akademi
 -  mv sistem-akademi html
+*******************
+*******************
