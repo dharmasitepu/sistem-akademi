@@ -61,14 +61,7 @@ Restart services
 ****************
 Deploy Website
 ****************
--  vim /etc/apache2/apache2.conf
--  Include /etc/phpmyadmin/apache.conf
--  vim /etc/apache2/sites-available/000-default.conf
-
-
-
-
-
+*  vim /etc/apache2/sites-available/000-default.conf
 * <VirtualHost *:80>			
 *       ServerAdmin webmaster@localhost
 *       DocumentRoot /var/www/html	
@@ -93,7 +86,8 @@ Deploy Website
 *        Options Indexes FollowSymLinks
 *        AllowOverride All
 *        Require all granted
-*  </Directory> 
+*  </Directory>
+-  Include /etc/phpmyadmin/apache.conf
 
 
 
@@ -102,8 +96,5 @@ Deploy Website
 
 -  cd /var/www
 -  rm -r html
--  mkdir backup
--  cd /var/www/backup
 -  git clone https://github.com/dharmasitepu/sistem-akademi
 -  mv sistem-akademi html
--  mv html /var/www
