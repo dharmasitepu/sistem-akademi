@@ -1,11 +1,10 @@
 ######################
 Deploy on Cloud Server
 ######################
-
-###############################################################################################
+===============================================================================================
 = Asterisk berjalan pada Alibaba Cloud berikut adalah detail tentang Instance yang digunakan  =
 = ( OS Ubuntu 20.04 Server ) ( 1 vCPU 1 GiB ) ( Disk 40 GB ) ( Public IP = 47.254.244.29 )    =
-###############################################################################################
+===============================================================================================
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
 who build web sites using PHP. Its goal is to enable you to develop projects
