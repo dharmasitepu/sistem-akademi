@@ -26,7 +26,7 @@ Website Environment
 ****************
 Pre-Installation
 ****************
--  ''apt update''
+''apt update''
 -  apt install git apache2 mysql-server phpmyadmin -y
 -  apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php mbstring libapache2-mod-php -y
 
