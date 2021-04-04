@@ -26,9 +26,9 @@ Website Environment
 ****************
 Pre-Installation
 ****************
-`apt update`
-``apt install git apache2 mysql-server phpmyadmin -y``
-``apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php mbstring libapache2-mod-php -y``
+-  apt update
+-  apt install git apache2 mysql-server phpmyadmin -y
+-  apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap php mbstring libapache2-mod-php -y
 
 ****************
 Check Status
@@ -62,9 +62,9 @@ Restart services
 Deploy Website
 ****************
 -  vim /etc/apache2/apache2.conf
-   ``Include /etc/phpmyadmin/apache.conf``
-
+-  Include /etc/phpmyadmin/apache.conf
 -  vim /etc/apache2/sites-available/000-default.conf
+---
 <VirtualHost *:80>
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/html
@@ -76,13 +76,14 @@ Deploy Website
 	ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+---
 
 -  vim /etc/apache2/apache2.conf
 <Directory /var/www>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
-				</Directory> 
+</Directory> 
 
 -  cd /var/www
 -  rm -r html
