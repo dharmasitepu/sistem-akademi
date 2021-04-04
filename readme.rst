@@ -23,57 +23,69 @@ Website Environment
 
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+****************
+Pre-Installation
+****************
+-  apt update
+-  apt install git apache2 mysql-server phpmyadmin -y
+-  apt install php php-common php-pspell php-curl php-gd php-intl php-mysql php-xml php-xmlrpc php-ldap php-zip php-soap phpmbstring libapache2-mod-php -y
 
-**************************
-Changelog and New Features
-**************************
+****************
+Check Status
+****************
+-  systemctl status mysql 
+-  systemctl status apache2 
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+****************
+Database Setup
+****************
+-  sudo mysql
+-  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY ‘admin’;
+-  GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost’;
+-  FLUSH PRIVILEGES;
+-  exit
+-  mysql -u root -p
+-  password : admin
+-  exit
 
-*******************
-Server Requirements
-*******************
+****************
+Restart services
+****************
+-  systemctl restart apache2
+-  systemctl restart mysql
 
-PHP version 5.6 or newer is recommended.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
 
-************
-Installation
-************
+****************
+Deploy Website
+****************
+-  vim /etc/apache2/apache2.conf
+Include /etc/phpmyadmin/apache.conf
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+-  vim /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+        <Directory "/var/www/html">
+            Options FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
 
-*******
-License
-*******
+-  vim /etc/apache2/apache2.conf
+<Directory /var/www>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+				</Directory> 
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+-  cd /var/www
+-  rm -r html
+-  mkdir backup
+-  cd /var/www/backup
+-  git clone https://github.com/dharmasitepu/sistem-akademi
+-  mv sistem-akademi html
+-  mv html /var/www
