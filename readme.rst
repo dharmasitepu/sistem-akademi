@@ -2,9 +2,9 @@
 Deploy at Cloud Server
 ######################
 
-*************************
-Resource at Alibaba Cloud
-*************************
+**************************
+Resources at Alibaba Cloud
+**************************
 -  ( OS Ubuntu 20.04 Server )
 -  ( 1 vCPU 1 GiB ) 
 -  ( Disk 40 GB ) 
