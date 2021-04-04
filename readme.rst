@@ -66,6 +66,9 @@ Deploy Website
 -  vim /etc/apache2/sites-available/000-default.conf
 
 
+
+
+
 * <VirtualHost *:80>			
 *       ServerAdmin webmaster@localhost
 *       DocumentRoot /var/www/html	
@@ -80,12 +83,22 @@ Deploy Website
  
 
 
--  vim /etc/apache2/apache2.conf
+
+
+
+
+
+*  vim /etc/apache2/apache2.conf
 *  <Directory /var/www>
 *        Options Indexes FollowSymLinks
 *        AllowOverride All
 *        Require all granted
 *  </Directory> 
+
+
+
+
+
 
 -  cd /var/www
 -  rm -r html
@@ -94,4 +107,3 @@ Deploy Website
 -  git clone https://github.com/dharmasitepu/sistem-akademi
 -  mv sistem-akademi html
 -  mv html /var/www
-
