@@ -1,9 +1,8 @@
-######################
-Deploy at Cloud Server
-######################
+
+# Deploy at Cloud Server
 
 **************************
-Resources at Alibaba Cloud
+# Resources at Alibaba Cloud
 **************************
 ```
 -  ( OS Ubuntu 20.04 Server )
@@ -13,7 +12,7 @@ Resources at Alibaba Cloud
 ```
 
 *******************
-Website Environment
+# Environment
 *******************
 ```
 -  CodeIgniter 3.1.1
@@ -23,12 +22,8 @@ Website Environment
 -  Mysql
 ```
 
-*******************
-
-*******************
-
 ****************
-Pre-Installation
+# Pre-Installation
 ****************
 ```
 -  apt update
@@ -37,7 +32,7 @@ Pre-Installation
 ```
 
 ****************
-Check Status
+# Check Status
 ****************
 ```
 -  systemctl status mysql 
@@ -45,7 +40,7 @@ Check Status
 ```
 
 ****************
-Database Setup
+# Database Setup
 ****************
 ```
 -  sudo mysql
@@ -59,7 +54,7 @@ Database Setup
 ```
 
 ****************
-Restart services
+# Restart services
 ****************
 ```
 -  systemctl restart apache2
@@ -68,7 +63,7 @@ Restart services
 
 
 ****************
-Deploy Website
+# Deploy Website
 ****************
 ```
 *  vim /etc/apache2/sites-available/000-default.conf
